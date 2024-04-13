@@ -14,6 +14,8 @@
 
 ## Live matarials docs
 
+pip3 install torch torchvision torchaudio
+
 [link](https://docs.google.com/document/d/1UFiHnyKRqgx8Lodsvdzu58LbVjdWHNf-uab2WmhE0A4/edit?usp=sharing)
 
 

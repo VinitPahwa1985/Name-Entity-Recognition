@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+ner_using_bert.egg-info/PKG-INFO
+ner_using_bert.egg-info/SOURCES.txt
+ner_using_bert.egg-info/dependency_links.txt
+ner_using_bert.egg-info/top_level.txt
