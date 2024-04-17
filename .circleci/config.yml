@@ -51,7 +51,7 @@ jobs:
 
   continuous-deployment:
     machine: true
-    resource_class: bappy/nerbert
+    resource_class: vinit/nerbert
     environment:
       REPOSITORY: ner-bert
       GAR_IMAGE_NAME: ner-bert
