@@ -4,9 +4,8 @@ import torch
 from torch.optim import SGD
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from transformers import BertModel, BertTokenizerFast ,BertConfig
-
-
+from transformers import BertTokenizerFast
+from model.bert import BertModel
 from ner.constants import *
 from ner.entity.artifact_entity import (
     DataTransformationArtifacts,
@@ -153,11 +152,7 @@ class ModelTraining:
                 f"Loaded {os.path.basename(self.data_transformation_artifacts.labels_to_ids_path)} pickle file from artifacts directory."
             )
 
-            # Load pre-trained BERT model configuration
-            config = BertConfig.from_pretrained('bert-base-uncased')
-
-            # Initialize BertModel with the provided configuration
-            model = BertModel(config=config)
+            model = BertModel(unique_labels=unique_labels)
             logging.info("created model class for bert")
 
             train_dataset = DataSequence(

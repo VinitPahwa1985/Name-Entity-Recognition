@@ -176,17 +176,17 @@ class TrainPipeline:
             data_transformation_artifacts = self.start_data_transformation(
                 data_ingestion_artifact=data_ingestion_artifact
             )
-            ##model_trainer_artifact = self.start_model_training(
-            ##    data_transformation_artifacts=data_transformation_artifacts
-            #)
-            #model_evaluation_artifact = self.start_model_evaluation(
-            #    data_transformation_artifact=data_transformation_artifacts,
-            #    model_trainer_artifact=model_trainer_artifact,
-            #)
+            model_trainer_artifact = self.start_model_training(
+             data_transformation_artifacts=data_transformation_artifacts
+            )
+            model_evaluation_artifact = self.start_model_evaluation(
+                data_transformation_artifact=data_transformation_artifacts,
+                model_trainer_artifact=model_trainer_artifact,
+            )
 
-            #model_pusher_artifact = self.start_model_pusher(
-            #    model_evaluation_artifact=model_evaluation_artifact
-            #)
+            model_pusher_artifact = self.start_model_pusher(
+                model_evaluation_artifact=model_evaluation_artifact
+            )
 
         except Exception as e:
             raise NerException(e, sys) from e
